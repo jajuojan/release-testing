@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/jajuojan/release-testing/compare/v0.2.0...v0.3.0) (2021-09-13)
+
+
+### Features
+
+* New feature 3 ([ab2b331](https://www.github.com/jajuojan/release-testing/commit/ab2b331d025cfdc95e7e296feb377f73388e4b7a))
+
+
+### Bug Fixes
+
+* New fix 3 ([cff1b4d](https://www.github.com/jajuojan/release-testing/commit/cff1b4da709ce869edee7585ab4a195daeee0b9f))
+
 ## [0.2.0](https://www.github.com/jajuojan/release-testing/compare/v0.1.0...v0.2.0) (2021-09-13)
 
 
