@@ -16,15 +16,7 @@ jobs:
           package-name: Hello World
 
       - uses: actions/checkout@v2
-      # if: ${{ steps.release_please.outputs.release_created }}
-
-      # Test git functionality
-      - run: |
-          echo $null >> testing.txt
-          git branch
-          git log -1
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+        if: ${{ steps.release_please.outputs.release_created }}
 
       - uses: actions-rs/toolchain@v1
         with:
@@ -48,4 +40,5 @@ jobs:
           upload_url: ${{ steps.release_please.outputs.upload_url }}
           asset_path: target/release/hello.exe
           asset_name: hello.exe
+          asset_content_type: application/octet-stream
         if: ${{ steps.release_please.outputs.release_created }}
