@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://www.github.com/jajuojan/release-testing/compare/v0.4.0...v0.5.0) (2021-09-13)
+
+
+### Features
+
+* New feature 10 ([93ef561](https://www.github.com/jajuojan/release-testing/commit/93ef561593d9bb87faf9952c8c16204a61a659ff))
+
 ## [0.4.0](https://www.github.com/jajuojan/release-testing/compare/v0.3.0...v0.4.0) (2021-09-13)
 
 
