@@ -19,15 +19,10 @@ jobs:
       # if: ${{ steps.release_please.outputs.release_created }}
 
       # Test git functionality
-        - run: |
-            echo $null >> testing.txt
-            git branch
-            git log -1
-      #      git config user.name github-actions
-      #      git config user.email github-actions@github.com
-      #      git add testing.txt
-      #      git commit -m "testing"
-      #      git push
+      - run: |
+          echo $null >> testing.txt
+          git branch
+          git log -1
 
       - uses: actions-rs/toolchain@v1
         with:
