@@ -1,0 +1,29 @@
+name: Build and upload release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --locked --release
+
+      #- name: 'Upload Artifact'
+      #  uses: actions/upload-artifact@v2
+      #  with:
+      #    name: win-move
+      #    path: target/release/win-move.exe
