@@ -1,9 +1,8 @@
 name: Build and upload release
 
-on:
-  push:
-    tags:
-      - 'v*.*.*'
+on: [push, pull_request]
+  tags:
+    - 'v*.*.*'
 
 jobs:
   release:
