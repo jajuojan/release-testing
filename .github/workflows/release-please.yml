@@ -16,7 +16,7 @@ jobs:
           package-name: Hello World
 
       # Test git functionality
-      - run: type nul > testing.txt
+      - run: echo $null >> testing.txt
       - run: git add testing.txt
       - run: git commit -m"testing"
 
