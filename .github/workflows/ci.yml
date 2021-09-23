@@ -30,7 +30,7 @@ jobs:
 
       - name: Run Clippy
         # uses: actions-rs/clippy-check@v1
-        uses: jajuojan/clippy-check@windows-testing2
+        uses: jajuojan/clippy-check@windows-testing
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           args: --all-features
