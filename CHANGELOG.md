@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0](https://www.github.com/jajuojan/release-testing/compare/v0.6.0...v0.7.0) (2022-02-16)
+
+
+### Features
+
+* New feature 10 ([0d974b5](https://www.github.com/jajuojan/release-testing/commit/0d974b5ec4a15e2321baa0987c138fdaec5667b6))
+* new testing 001 ([8101c45](https://www.github.com/jajuojan/release-testing/commit/8101c4541a5b0e4a796d674333e9d3b375443021))
+
 ## [0.6.0](https://www.github.com/jajuojan/release-testing/compare/v0.5.0...v0.6.0) (2021-09-13)
 
 
