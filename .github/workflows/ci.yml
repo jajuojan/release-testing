@@ -5,8 +5,8 @@ on:
     branches:
       - main
       - development
-  repository_dispatch:
-    types: [build, release]
+  release:
+    types: [created]
 
 
 env:

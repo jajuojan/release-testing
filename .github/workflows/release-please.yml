@@ -30,14 +30,13 @@ jobs:
           components: clippy
         if: ${{ !steps.release_please.outputs.release_created }}
 
-      - name: Run Clippy
-        # uses: actions-rs/clippy-check@v1
-        uses: ErichDonGubler/clippy-check@6723b97308d5e57f643a52398b9e5121813b5834
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          args: --all-features
-        if: ${{ !steps.release_please.outputs.release_created }}
-
+      #- name: Run Clippy
+      #  # uses: actions-rs/clippy-check@v1
+      #  uses: ErichDonGubler/clippy-check@6723b97308d5e57f643a52398b9e5121813b5834
+      #  with:
+      #    token: ${{ secrets.GITHUB_TOKEN }}
+      #    args: --all-features
+      #  if: ${{ !steps.release_please.outputs.release_created }}
 
       - name: RELEASE - Checkout code
         uses: actions/checkout@v2
