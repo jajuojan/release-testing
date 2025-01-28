@@ -57,6 +57,13 @@ jobs:
           args: --locked --release
         if: ${{ steps.release_please.outputs.release_created }}
 
+      - name: 'Create Zip'
+        run: |
+          mkdir -p artifacts
+          zip artifacts/hello.zip target/release/hello.exe
+          zip artifacts/hello.zip LICENSE
+          zip artifacts/hello.zip README.md
+
       - name: RELEASE - Upload release asset
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
@@ -64,7 +71,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.release_please.outputs.upload_url }}
-          asset_path: target/release/hello.exe
-          asset_name: hello.exe
+          asset_path: artifacts/hello.zip
+          asset_name: hello.zip
           asset_content_type: application/octet-stream
         if: ${{ steps.release_please.outputs.release_created }}
