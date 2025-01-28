@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/jajuojan/release-testing/compare/v0.7.0...v0.8.0) (2025-01-28)
+
+
+### Features
+
+* new testing 002 ([7430545](https://github.com/jajuojan/release-testing/commit/7430545fa3f53201cd8efcef69498e1d2367a2c1))
+
 ## [0.7.0](https://www.github.com/jajuojan/release-testing/compare/v0.6.0...v0.7.0) (2022-02-16)
 
 
