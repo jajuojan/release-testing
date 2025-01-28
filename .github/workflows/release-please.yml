@@ -14,8 +14,6 @@ jobs:
         id: release_please
         with:
           release-type: rust
-          package-name: Hello World
-
 
       - name: Checkout code
         uses: actions/checkout@v4
