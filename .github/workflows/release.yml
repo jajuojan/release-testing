@@ -25,8 +25,15 @@ jobs:
           command: build
           args: --locked --release
 
-      #- name: 'Upload Artifact'
-      #  uses: actions/upload-artifact@v2
-      #  with:
-      #    name: win-move
-      #    path: target/release/win-move.exe
+      - name: 'Create Zip'
+        run: |
+          mkdir -p artifacts
+          zip artifacts/win-move.zip target/release/win-move.exe
+          zip artifacts/win-move.zip LICENSE
+          zip artifacts/win-move.zip README.md
+
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: win-move
+          path: artifacts/win-move.zip
