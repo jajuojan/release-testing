@@ -25,9 +25,9 @@ jobs:
       - name: 'Create Zip'
         run: |
           mkdir -p artifacts
-          zip artifacts/win-move.zip target/release/win-move.exe
-          zip artifacts/win-move.zip LICENSE
-          zip artifacts/win-move.zip README.md
+          Compress-Archive -Path target/release/win-move.exe -Destination artifacts/win-move.zip
+          Compress-Archive -Path LICENSE -Destination artifacts/win-move.zip
+          Compress-Archive -Path README.md -Destination artifacts/win-move.zip
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2

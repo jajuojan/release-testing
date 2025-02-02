@@ -55,12 +55,13 @@ jobs:
           args: --locked --release
         if: ${{ steps.release_please.outputs.release_created }}
 
-      - name: 'Create Zip'
+      - name: 'RELEASE - Create Zip'
         run: |
           mkdir -p artifacts
-          zip artifacts/hello.zip target/release/hello.exe
-          zip artifacts/hello.zip LICENSE
-          zip artifacts/hello.zip README.md
+          Compress-Archive -Path target/release/win-move.exe -Destination artifacts/win-move.zip
+          Compress-Archive -Path LICENSE -Destination artifacts/win-move.zip
+          Compress-Archive -Path README.md -Destination artifacts/win-move.zip
+        if: ${{ steps.release_please.outputs.release_created }}
 
       - name: RELEASE - Upload release asset
         id: upload-release-asset
