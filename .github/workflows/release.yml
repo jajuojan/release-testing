@@ -30,7 +30,7 @@ jobs:
           Compress-Archive -Path README.md -Destination artifacts/win-move.zip
 
       - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: win-move
           path: artifacts/win-move.zip
