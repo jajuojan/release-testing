@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/jajuojan/release-testing/compare/v0.9.0...v0.10.0) (2025-02-04)
+
+
+### Features
+
+* new feature 2 ([3ef825b](https://github.com/jajuojan/release-testing/commit/3ef825b6556b36b9c58b309a96f28d1284d38cd9))
+
 ## [0.9.0](https://github.com/jajuojan/release-testing/compare/v0.8.0...v0.9.0) (2025-01-28)
 
 
