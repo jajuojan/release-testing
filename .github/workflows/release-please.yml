@@ -59,7 +59,9 @@ jobs:
         run: |
           echo "Release created: ${{ steps.release_please.outputs.release_created }}"
           echo "Tag name: ${{ steps.release_please.outputs.tag_name }}"
-          echo "Upload URL: ${{ steps.release_please.outputs.major }}"
+          echo "major: ${{ steps.release_please.outputs.major }}"
+          echo "minor: ${{ steps.release_please.outputs.minor }}"
+          echo "patch: ${{ steps.release_please.outputs.patch }}"
 
       - name: 'RELEASE - Create Zip'
         run: |
@@ -68,6 +70,7 @@ jobs:
           Compress-Archive -Path target/release/hello.exe -Destination artifacts/hello.zip
           Compress-Archive -Path LICENSE -Update -Destination artifacts/hello.zip
           Compress-Archive -Path README.md -Update -Destination artifacts/hello.zip
+          Compress-Archive -Path CHANGELOG.md -Update -Destination artifacts/hello.zip
         if: ${{ steps.release_please.outputs.release_created }}
 
       - name: RELEASE - Upload release asset
@@ -78,6 +81,6 @@ jobs:
         with:
           upload_url: ${{ steps.release_please.outputs.upload_url }}
           asset_path: artifacts/hello.zip
-          asset_name: hello-${{ steps.release_please.outputs.tag_name }}.zip
+          asset_name: hello-${{ steps.release_please.outputs.major }}.${{ steps.release_please.outputs.minor }}.${{ steps.release_please.outputs.patch }}.zip
           asset_content_type: application/octet-stream
         if: ${{ steps.release_please.outputs.release_created }}
