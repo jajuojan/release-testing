@@ -55,6 +55,12 @@ jobs:
           args: --locked --release
         #if: ${{ steps.release_please.outputs.release_created }}
 
+      - name: Print release-please outputs
+        run: |
+          echo "Release created: ${{ steps.release_please.outputs.release_created }}"
+          echo "Tag name: ${{ steps.release_please.outputs.tag_name }}"
+          echo "Upload URL: ${{ steps.release_please.outputs.major }}"
+
       - name: 'RELEASE - Create Zip'
         run: |
           mkdir -p artifacts

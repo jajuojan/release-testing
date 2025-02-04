@@ -1,0 +1,7 @@
+{
+  "github.copilot.enable": {
+    "*": false,
+    "rust": true,
+    "yaml": true,
+  },
+}
