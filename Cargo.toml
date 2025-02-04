@@ -2,3 +2,7 @@
 name = "hello"
 version = "0.11.1"
 edition = "2018"
+readme = "README.md"
+description="A simple hello world program"
+repository = "https://github.com/jajuojan/release-testing"
+license = "MIT"

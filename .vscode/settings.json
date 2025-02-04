@@ -3,5 +3,6 @@
     "*": false,
     "rust": true,
     "yaml": true,
+    "toml": true
   },
 }
