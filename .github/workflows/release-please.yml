@@ -58,7 +58,7 @@ jobs:
       - name: 'RELEASE - Create Zip'
         run: |
           mkdir -p artifacts
-          Get-ChildItem -Path "." -Directory -Recurse
+          Get-ChildItem -Path "." -Recurse
           Compress-Archive -Path target/release/win-move.exe -Destination artifacts/win-move.zip
           Compress-Archive -Path LICENSE -Destination artifacts/win-move.zip
           Compress-Archive -Path README.md -Destination artifacts/win-move.zip
