@@ -59,9 +59,9 @@ jobs:
         run: |
           mkdir -p artifacts
           Get-ChildItem -Path "." -Recurse
-          Compress-Archive -Path target/release/win-move.exe -Destination artifacts/win-move.zip
-          Compress-Archive -Path LICENSE -Destination artifacts/win-move.zip
-          Compress-Archive -Path README.md -Destination artifacts/win-move.zip
+          Compress-Archive -Path target/release/hello.exe -Destination artifacts/hello.zip
+          Compress-Archive -Path LICENSE -Destination artifacts/hello.zip
+          Compress-Archive -Path README.md -Destination artifacts/hello.zip
         #if: ${{ steps.release_please.outputs.release_created }}
 
       - name: RELEASE - Upload release asset
