@@ -60,8 +60,9 @@ jobs:
           mkdir -p artifacts
           Get-ChildItem -Path "." -Recurse
           Compress-Archive -Path target/release/hello.exe -Destination artifacts/hello.zip
-          Compress-Archive -Path LICENSE -Destination artifacts/hello.zip
-          Compress-Archive -Path README.md -Destination artifacts/hello.zip
+          Compress-Archive -Path LICENSE -Update -Destination artifacts/hello.zip
+          Compress-Archive -Path README.md -Update -Destination artifacts/hello.zip
+          Compress-Archive -Path target/release/hello.exe -Destination artifacts/hello-${{ steps.release_please.outputs.tag_name }}.zip
         #if: ${{ steps.release_please.outputs.release_created }}
 
       - name: RELEASE - Upload release asset
