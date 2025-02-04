@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.2](https://github.com/jajuojan/release-testing/compare/v0.11.1...v0.11.2) (2025-02-04)
+
+
+### Bug Fixes
+
+* some bugfix ([d1c7abd](https://github.com/jajuojan/release-testing/commit/d1c7abd6a3b6d2c5e944a64ddc04b4db04f73d3b))
+
 ## [0.11.1](https://github.com/jajuojan/release-testing/compare/v0.11.0...v0.11.1) (2025-02-04)
 
 
