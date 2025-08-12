@@ -16,7 +16,7 @@ jobs:
           release-type: rust
 
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         if: ${{ !steps.release_please.outputs.release_created }}
 
       - name: Install Rust toolchain
@@ -37,7 +37,7 @@ jobs:
       #  if: ${{ !steps.release_please.outputs.release_created }}
 
       - name: RELEASE - Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         if: ${{ steps.release_please.outputs.release_created }}
 
       - name: RELEASE - Install Rust toolchain
